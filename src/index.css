@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 30% 6%;
+  --foreground: 0 0% 98%;
+  --card: 240 25% 8%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 25% 8%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 190 100% 54%;
+  --primary-foreground: 240 25% 10%;
+  --secondary: 270 100% 66%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 15% 16%;
+  --muted-foreground: 240 5% 65%;
+  --accent: 270 100% 66%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 25% 14%;
+  --input: 240 25% 14%;
+  --ring: 190 100% 54%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 30% 6%;
+  --foreground: 0 0% 98%;
+  --card: 240 25% 8%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 25% 8%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 190 100% 54%;
+  --primary-foreground: 240 25% 10%;
+  --secondary: 270 100% 66%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 15% 16%;
+  --muted-foreground: 240 5% 65%;
+  --accent: 270 100% 66%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 25% 14%;
+  --input: 240 25% 14%;
+  --ring: 190 100% 54%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-[1400px] px-4 md:px-6 lg:px-8;
+  }
+  
+  .heading-xl {
+    @apply font-display text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl;
+  }
+  
+  .heading-lg {
+    @apply font-display text-2xl font-bold leading-tight sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  .heading-md {
+    @apply font-display text-xl font-bold leading-tight sm:text-2xl md:text-3xl;
+  }
+  
+  .body-lg {
+    @apply text-base leading-relaxed sm:text-lg;
+  }
+  
+  .body-md {
+    @apply text-sm leading-relaxed sm:text-base;
+  }
+  
+  .body-sm {
+    @apply text-xs leading-relaxed sm:text-sm;
+  }
+
+  /* Animation classes */
+  .architecture-node.animate-in {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+
+  .architecture-connection.animate-in {
+    opacity: 1;
+  }
+
+  .roadmap-item.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
